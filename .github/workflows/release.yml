@@ -48,7 +48,9 @@ jobs:
           ORG_GRADLE_PROJECT_signingInMemoryKeyPassword: ${{ secrets.SIGNING_IN_MEMORY_KEY_PASSWORD }}
         run: |
           ./gradlew :appstats:publishAndReleaseToMavenCentral --no-configuration-cache \
-                    -PVERSION_NAME=${{ steps.version.outputs.version }} --stacktrace
+                    -PVERSION_NAME=${{ steps.version.outputs.version }} \
+                    -PRELEASE_SIGNING_ENABLED=true \
+                    --stacktrace
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
