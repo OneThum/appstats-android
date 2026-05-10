@@ -1,4 +1,4 @@
-// Root build script for appstats-android.
+// Root build script for AppStats-Android.
 // Copyright © 2026 One Thum Software
 
 @Suppress("DSL_SCOPE_VIOLATION")

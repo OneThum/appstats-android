@@ -1,10 +1,10 @@
 # AppStats Android SDK
 
-[![Build](https://github.com/OneThum/appstats-android/actions/workflows/build.yml/badge.svg)](https://github.com/OneThum/appstats-android/actions/workflows/build.yml)
-[![Release](https://jitpack.io/v/OneThum/appstats-android.svg)](https://jitpack.io/#OneThum/appstats-android)
+[![Build](https://github.com/OneThum/AppStats-Android/actions/workflows/build.yml/badge.svg)](https://github.com/OneThum/AppStats-Android/actions/workflows/build.yml)
+[![Release](https://jitpack.io/v/OneThum/AppStats-Android.svg)](https://jitpack.io/#OneThum/AppStats-Android)
 
 Privacy-first analytics SDK for Android apps. Native peer to the
-[AppStats Swift SDK](https://github.com/OneThum/AppStats), conforming to the
+[AppStats Swift SDK](https://github.com/OneThum/AppStats-iOS), conforming to the
 same [SDK Protocol Specification](../docs/SDK_PROTOCOL.md).
 
 - Auto-tracks: app lifecycle, screens, crashes
@@ -38,7 +38,7 @@ dependencyResolutionManagement {
 
 // app/build.gradle.kts
 dependencies {
-    implementation("com.github.OneThum:appstats-android:0.1.1")
+    implementation("com.github.OneThum:AppStats-Android:0.1.1")
 }
 ```
 
@@ -55,9 +55,9 @@ dependencies {
 #### Maintainer checklist — Maven Central graduation
 
 1. **Namespace**: In [Central Portal](https://central.sonatype.com/), claim `com.onethumsoftware` (DNS TXT verification as documented by Sonatype).
-2. **Signing**: Create a dedicated GPG key for artifacts; publish the public key; store private key + passphrase in GitHub Actions secrets for the **appstats-android** repo (names depend on `release.yml`; typically along the lines of `SIGNING_KEY`, `SIGNING_PASSWORD`).
+2. **Signing**: Create a dedicated GPG key for artifacts; publish the public key; store private key + passphrase in GitHub Actions secrets for the **AppStats-Android** repo (names depend on `release.yml`; typically along the lines of `SIGNING_KEY`, `SIGNING_PASSWORD`).
 3. **Publishing**: The Android repo uses the Vanniktech Maven Publish plugin with `RELEASE_SIGNING_ENABLED=true` only in the release workflow (JitPack builds leave signing off).
-4. **Release**: Tag `v1.0.0` on **OneThum/appstats-android**, run the release workflow, confirm staging → release on Central.
+4. **Release**: Tag `v1.0.0` on **OneThum/AppStats-Android**, run the release workflow, confirm staging → release on Central.
 5. **Consumers**: Update apps from JitPack coordinates to `com.onethumsoftware:appstats-android:1.0.0` (or newer).
 
 Until these steps are complete, stay on **JitPack** coordinates above.

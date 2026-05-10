@@ -1,4 +1,4 @@
-// Settings for the appstats-android Gradle build.
+// Settings for the AppStats-Android Gradle build.
 // Copyright © 2026 One Thum Software
 
 pluginManagement {
@@ -24,7 +24,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "appstats-android"
+rootProject.name = "AppStats-Android"
 
 include(":appstats")
 include(":sample-app")

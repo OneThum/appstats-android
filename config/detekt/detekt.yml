@@ -1,4 +1,4 @@
-# Detekt configuration for appstats-android.
+# Detekt configuration for AppStats-Android.
 # Inherits the bundled defaults; overrides what is unfit for SDK code.
 # SDKs intentionally catch broad Throwable in a few places (crash reporters,
 # atomic write paths) because a leaking exception there could crash the host app.

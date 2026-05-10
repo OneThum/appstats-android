@@ -1,15 +1,15 @@
-# Contributing to appstats-android
+# Contributing to AppStats-Android
 
 Thanks for your interest! This SDK is a peer to the
-[AppStats Swift SDK](https://github.com/OneThum/AppStats) and shares the same
+[AppStats Swift SDK](https://github.com/OneThum/AppStats-iOS) and shares the same
 on-the-wire contract documented in
 [docs/SDK_PROTOCOL.md](../docs/SDK_PROTOCOL.md).
 
 ## Local setup
 
 ```bash
-git clone https://github.com/OneThum/appstats-android.git
-cd appstats-android
+git clone https://github.com/OneThum/AppStats-Android.git
+cd AppStats-Android
 ./gradlew :appstats:assembleDebug
 ./gradlew :appstats:testDebugUnitTest
 ./gradlew :appstats:ktlintCheck :appstats:detekt

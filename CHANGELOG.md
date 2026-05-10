@@ -29,5 +29,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `androidx.startup`-based opt-in auto-configuration via manifest meta-data.
 - `WorkManager` expedited background-flush worker to finish in-flight sends after
   backgrounding.
-- Distributed via JitPack (`com.github.OneThum:appstats-android:0.1.0`). Maven
+- Distributed via JitPack (`com.github.OneThum:AppStats-Android:0.1.0`). Maven
   Central graduation tracked in [Phase 9](#).
