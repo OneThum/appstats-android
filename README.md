@@ -42,6 +42,11 @@ dependencies {
 }
 ```
 
+### Repository & JitPack artifact id (May 2026)
+
+The public GitHub repository is **`OneThum/AppStats-Android`** (older links to `OneThum/appstats-android` redirect).  
+On JitPack the module id matches the repo name: use **`com.github.OneThum:AppStats-Android`** — replace any legacy `com.github.OneThum:appstats-android` lines.
+
 ### From Maven Central (post-Phase 9)
 
 After the Sonatype Central Portal namespace `com.onethumsoftware` is verified and CI secrets are configured (see checklist below):
