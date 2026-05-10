@@ -44,11 +44,23 @@ dependencies {
 
 ### From Maven Central (post-Phase 9)
 
+After the Sonatype Central Portal namespace `com.onethumsoftware` is verified and CI secrets are configured (see checklist below):
+
 ```kotlin
 dependencies {
     implementation("com.onethumsoftware:appstats-android:1.0.0")
 }
 ```
+
+#### Maintainer checklist — Maven Central graduation
+
+1. **Namespace**: In [Central Portal](https://central.sonatype.com/), claim `com.onethumsoftware` (DNS TXT verification as documented by Sonatype).
+2. **Signing**: Create a dedicated GPG key for artifacts; publish the public key; store private key + passphrase in GitHub Actions secrets for the **appstats-android** repo (names depend on `release.yml`; typically along the lines of `SIGNING_KEY`, `SIGNING_PASSWORD`).
+3. **Publishing**: The Android repo uses the Vanniktech Maven Publish plugin with `RELEASE_SIGNING_ENABLED=true` only in the release workflow (JitPack builds leave signing off).
+4. **Release**: Tag `v1.0.0` on **OneThum/appstats-android**, run the release workflow, confirm staging → release on Central.
+5. **Consumers**: Update apps from JitPack coordinates to `com.onethumsoftware:appstats-android:1.0.0` (or newer).
+
+Until these steps are complete, stay on **JitPack** coordinates above.
 
 ## Quick start
 
